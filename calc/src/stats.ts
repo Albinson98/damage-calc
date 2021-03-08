@@ -158,9 +158,9 @@ export const Stats = new (class {
 
   calcStatRBYFromDV(stat: StatName, base: number, dv: number, level: number) {
     if (stat === 'hp') {
-      return Math.floor((((base + dv) * 2 + 63) * level) / 100) + level + 10;
+      return Math.floor((((base + dv) * 2) * level) / 100) + level + 10;
     } else {
-      return Math.floor((((base + dv) * 2 + 63) * level) / 100) + 5;
+      return Math.floor((((base + dv) * 2) * level) / 100) + 5;
     }
   }
 
